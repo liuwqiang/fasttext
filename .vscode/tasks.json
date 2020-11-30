@@ -5,9 +5,11 @@
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
+                "-I",
+                "src",
                 "-std=c++11",
                 "-g",
-                "/opt/fasttext/*.o",
+                "*.o",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
