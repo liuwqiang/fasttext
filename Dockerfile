@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 RUN mkdir -p /opt/sent2vec/src
 ADD setup.py /opt/sent2vec/
