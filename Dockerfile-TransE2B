@@ -1,0 +1,5 @@
+FROM docker.wanfangdata.com.cn/wfk8s/sent2vec:base 
+
+ADD trans_emb_bytes.py .
+
+ENTRYPOINT ["python3"]
