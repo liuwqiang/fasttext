@@ -1,0 +1,7 @@
+FROM docker.wanfangdata.com.cn/wfk8s/fasttext-faiss:base
+
+WORKDIR /fasttext
+
+ADD eval_faiss_score.py .
+
+ENTRYPOINT ["python"]

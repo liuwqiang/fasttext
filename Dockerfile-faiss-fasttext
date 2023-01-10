@@ -1,6 +1,6 @@
 FROM docker.wanfangdata.com.cn/wfk8s/conda:python3
-COPY fasttext /fasttext
+COPY . /fasttext
 WORKDIR /fasttext
-RUN apt-get update && apt-get install gcc g++ \
+RUN apt-get update && apt-get -y install gcc g++ make \
+&& pip3 install . && make \
 && conda install mkl && conda install faiss-cpu -c pytorch
-&& pip3 install . && make
